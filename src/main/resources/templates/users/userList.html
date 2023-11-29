@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<body>
+	<div class="container">
+		<div>
+			<a class="backPage" onclick="history.go(-1);">
+				<i class="fa-solid fa-chevron-left fa-2xl"></i>
+			</a>			
+		</div>
+		 <div>
+			 <table>
+				 <thead>
+					 <tr>
+						 <th>아이디</th>
+						 <th>이름</th>
+ 						 <th>가입일</th>
+					 </tr>
+				 </thead>
+				 <tbody>
+					 <tr th:each="user : ${users}">
+						 <td th:text="${user.id}"></td>
+						 <td th:text="${user.name}"></td>
+						 <td th:text="${user.enroll_date}"></td>
+					 </tr>
+				 </tbody>
+			 </table>
+		 </div>
+	</div> <!-- /container -->
+</body>
+</html>

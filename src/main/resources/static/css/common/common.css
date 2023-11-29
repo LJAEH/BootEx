@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; 
+  text-align: center; 
+}
+
+#userInfo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #3498db;
+  color: #ffffff;
+  width: 100%;
+  display : flex;
+  justify-content: right;
+  z-index : 3;
+}
+
+#userInfo span {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+.homeA {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 110px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.container form button:hover,
+.container a.homeA:hover {
+    background-color: #2980b9;
+}
+.backPage{
+  padding: 20px 20px;
+  position: fixed;
+  top: 10px; /* 조정 가능한 값, 상단 여백 */
+  left: 10px; /* 조정 가능한 값, 좌측 여백 */
+  cursor: pointer;
+  z-index: 1000; /* 다른 요소들보다 위에 위치하도록 하는 값 */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+#mainDiv {
+    display: flex;
+    height: 100%; /* 100% 화면 높이로 설정 */
+	width: 100%;
+}
+
+#menuDiv {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(41, 38, 38);
+    color: rgb(255, 255, 255);
+    padding: 60px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 2;
+}
+
+#contentDiv {
+  flex: 1;
+  padding: 60px 20px 0 20px;
+  margin-left: 30%; /* #menuDiv의 너비만큼 여백 추가 */
+  box-sizing: border-box; /* 마진을 포함한 전체 너비 계산 */
+}
+/* Optional: Style for the menu items */
+#menuDiv a {
+    padding : 10px;
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+   	font-weight: bold;
+}
+
+#menuDiv a:hover {
+    text-decoration: underline;
+}

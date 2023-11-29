@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="/js/common/common.js"></script>
+
+<body>
+	<div class="container">
+<!--		<div>
+			<a class="backPage" onclick="history.go(-1);">
+				<i class="fa-solid fa-chevron-left fa-2xl"></i>
+			</a>			
+		</div>-->
+		 <div id="userInfo">
+			<div sec:authentication="name"></div>
+			<span th:text="${loginId}"></span><span>님 안녕하세요</span>
+			<a style="margin-left: 30px;" href="/logout">로그아웃</a>
+		 </div>
+		 <div id="mainDiv">
+			<div id="menuDiv">
+				<a href="/main">게시판</a>
+				<a href="#">목록</a>
+				<a href="/">랭킹</a>
+				<a href="#">마이페이지</a>
+			</div>
+			<div id="contentDiv">
+				<table class="table" id="article-table">
+					<thead>
+						<tr>
+							<th class="title col-6"><a>제목</a></th>
+							<th class="hashtag col-2"><a>해시태그</a></th>
+							<th class="user-id"><a>작성자</a></th>
+							<th class="created-at"><span>작성일</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		 </div>
+	</div> <!-- /container -->
+</body>
+</html>
